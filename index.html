@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究员个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 20px;
+        }
+        
+        .info {
+            flex: 1;
+        }
+        
+        .name {
+            font-size: 28px;
+            color: #4a90e2;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .position {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .contact {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        
+        .contact a {
+            color: #4a90e2;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        .photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-left: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        section {
+            margin-bottom: 35px;
+        }
+        
+        h2 {
+            color: #4a90e2;
+            font-size: 22px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+        }
+        
+        .bio {
+            text-align: justify;
+            line-height: 1.8;
+        }
+        
+        .news-item, .award-item, .talk-item, .service-item, .teaching-item {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .news-item::before, .award-item::before, .talk-item::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #4a90e2;
+        }
+        
+        .news-item .date {
+            font-weight: bold;
+            color: #666;
+        }
+        
+        .publication {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .publication::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #4a90e2;
+            font-size: 20px;
+        }
+        
+        .pub-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .pub-title a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        .pub-title a:hover {
+            text-decoration: underline;
+        }
+        
+        .pub-authors {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 3px;
+        }
+        
+        .pub-venue {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .pub-links {
+            margin-top: 5px;
+        }
+        
+        .pub-links a {
+            color: #4a90e2;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 13px;
+        }
+        
+        .pub-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #777;
+            font-size: 13px;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+            }
+            
+            .photo {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="info">
+                <h1 class="name">研究员姓名</h1>
+                <div class="position">Research Associate</div>
+                <div class="position">帝国理工学院</div>
+                <div class="position">某某研究所/实验室</div>
+                <div class="contact">
+                    <strong>Email:</strong> <a href="mailto:your.email@imperial.ac.uk">your.email@imperial.ac.uk</a><br>
+                    <a href="#">[CV]</a>
+                    <a href="#">[Google Scholar]</a>
+                    <a href="#">[LinkedIn]</a>
+                    <a href="#">[GitHub]</a>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="https://via.placeholder.com/180" alt="个人照片">
+            </div>
+        </div>
+
+        <section>
+            <h2>Biography</h2>
+            <div class="bio">
+                <p>我目前是帝国理工学院的研究助理，与XXX教授合作。此前，我在XXX大学获得了博士学位，导师是XXX教授。我在2024年获得了工学学士学位。在此之前，我曾在XXX公司担任研究实习生。</p>
+                <p>我的研究方向主要集中在XXX领域（例如：计算机视觉、自然语言处理等），同时我也对XXX和XXX感兴趣。</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>News</h2>
+            <div class="news-item">
+                <span class="date">[11/2024]</span> 一篇论文被XXX会议接收！
+            </div>
+            <div class="news-item">
+                <span class="date">[09/2024]</span> 开始在帝国理工学院担任研究助理。
+            </div>
+            <div class="news-item">
+                <span class="date">[06/2024]</span> 一篇论文被XXX 2024接收。
+            </div>
+            <div class="news-item">
+                <span class="date">[03/2024]</span> 通过博士答辩，现在是博士候选人！
+            </div>
+        </section>
+
+        <section>
+            <h2>Publications</h2>
+            <p style="margin-bottom: 15px; font-size: 14px; color: #666;">(*共同第一作者)</p>
+            
+            <div class="publication">
+                <div class="pub-title">
+                    <a href="#">论文标题：一个关于XXX的创新方法</a>
+                </div>
+                <div class="pub-authors">
+                    <strong>作者姓名</strong>, 合作者1, 合作者2, 合作者3
+                </div>
+                <div class="pub-venue">
+                    国际顶级会议 (<strong>CVPR</strong>), 2025
+                </div>
+                <div class="pub-links">
+                    [<a href="#">pdf</a>] [<a href="#">code</a>] [<a href="#">project</a>]
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="pub-title">
+                    <a href="#">论文标题：另一个关于XXX的研究</a>
+                </div>
+                <div class="pub-authors">
+                    合作者1*, <strong>作者姓名*</strong>, 合作者2, 合作者3
+                </div>
+                <div class="pub-venue">
+                    国际顶级会议 (<strong>ICCV</strong>), 2024, <span class="highlight">Oral</span>
+                </div>
+                <div class="pub-links">
+                    [<a href="#">pdf</a>] [<a href="#">code</a>]
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="pub-title">
+                    <a href="#">论文标题：XXX系统的开发与应用</a>
+                </div>
+                <div class="pub-authors">
+                    <strong>作者姓名</strong>, 合作者1, 合作者2
+                </div>
+                <div class="pub-venue">
+                    顶级期刊 (<strong>TPAMI</strong>), 2024
+                </div>
+                <div class="pub-links">
+                    [<a href="#">pdf</a>] [<a href="#">dataset</a>]
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Awards</h2>
+            <div class="award-item">明日之星奖, 某某机构, 2023</div>
+            <div class="award-item">优秀毕业生, 某某大学, 2020</div>
+            <div class="award-item">优秀学生, 某某大学, 2017-2019</div>
+        </section>
+
+        <section>
+            <h2>Invited Talks</h2>
+            <div class="talk-item">XXX领域的进展与挑战, 某某大学, 07/2025</div>
+            <div class="talk-item">基于视觉的XXX处理, 某某研究院, 11/2024</div>
+            <div class="talk-item">XXX系统介绍, 某某学院, 01/2024</div>
+        </section>
+
+        <section>
+            <h2>Services</h2>
+            <div class="service-item"><strong>会议审稿人:</strong> CVPR, ICCV, ECCV, NeurIPS, ICML, ICLR, AAAI</div>
+            <div class="service-item"><strong>期刊审稿人:</strong> IJCV, TIP, TMM, TCSVT, TPAMI</div>
+        </section>
+
+        <section>
+            <h2>Teaching</h2>
+            <div class="teaching-item">助教：面向对象编程与数据结构, 2023年秋季学期</div>
+            <div class="teaching-item">助教：C++编程, 2021年春季和秋季学期</div>
+        </section>
+
+        <footer>
+            © 2024-2025 作者姓名. 最后更新于 2025年1月.
+        </footer>
+    </div>
+</body>
+</html>
