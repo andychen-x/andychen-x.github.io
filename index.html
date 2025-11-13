@@ -100,6 +100,33 @@
             line-height: 1.8;
         }
         
+        .news-container {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #fafafa;
+        }
+        
+        .news-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .news-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        
+        .news-container::-webkit-scrollbar-thumb {
+            background: #4a90e2;
+            border-radius: 4px;
+        }
+        
+        .news-container::-webkit-scrollbar-thumb:hover {
+            background: #357abd;
+        }
+        
         .news-item, .award-item, .talk-item, .service-item, .teaching-item {
             margin-bottom: 10px;
             padding-left: 20px;
@@ -234,17 +261,37 @@
 
         <section>
             <h2>News</h2>
-            <div class="news-item">
-                <span class="date">[11/2024]</span> 一篇论文被XXX会议接收！
-            </div>
-            <div class="news-item">
-                <span class="date">[09/2024]</span> 开始在帝国理工学院担任研究助理。
-            </div>
-            <div class="news-item">
-                <span class="date">[06/2024]</span> 一篇论文被XXX 2024接收。
-            </div>
-            <div class="news-item">
-                <span class="date">[03/2024]</span> 通过博士答辩，现在是博士候选人！
+            <div class="news-container">
+                <div class="news-item">
+                    <span class="date">[11/2024]</span> 一篇论文被XXX会议接收！
+                </div>
+                <div class="news-item">
+                    <span class="date">[09/2024]</span> 开始在帝国理工学院担任研究助理。
+                </div>
+                <div class="news-item">
+                    <span class="date">[06/2024]</span> 一篇论文被XXX 2024接收。
+                </div>
+                <div class="news-item">
+                    <span class="date">[03/2024]</span> 通过博士答辩，现在是博士候选人！
+                </div>
+                <div class="news-item">
+                    <span class="date">[12/2023]</span> 受邀在XXX会议上做报告。
+                </div>
+                <div class="news-item">
+                    <span class="date">[09/2023]</span> 获得"明日之星"奖项。
+                </div>
+                <div class="news-item">
+                    <span class="date">[07/2023]</span> 一篇论文被ICCV 2023接收。
+                </div>
+                <div class="news-item">
+                    <span class="date">[03/2023]</span> 开始在XXX公司实习。
+                </div>
+                <div class="news-item">
+                    <span class="date">[11/2022]</span> 两篇论文被接收。
+                </div>
+                <div class="news-item">
+                    <span class="date">[04/2022]</span> 开始在MSRA实习。
+                </div>
             </div>
         </section>
 
