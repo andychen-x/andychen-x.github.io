@@ -32,8 +32,12 @@
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 30px;
-            border-bottom: 2px solid #4a90e2;
+            border-bottom: 3px solid #4a90e2;
             padding-bottom: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
         }
         
         .info {
@@ -41,10 +45,11 @@
         }
         
         .name {
-            font-size: 28px;
-            color: #4a90e2;
+            font-size: 32px;
+            color: #2c5aa0;
             margin-bottom: 15px;
             font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
         
         .position {
@@ -62,19 +67,30 @@
             color: #4a90e2;
             text-decoration: none;
             margin-right: 10px;
+            transition: all 0.3s ease;
+            padding: 3px 8px;
+            border-radius: 4px;
         }
         
         .contact a:hover {
-            text-decoration: underline;
+            background-color: #4a90e2;
+            color: white;
+            text-decoration: none;
         }
         
         .photo {
             width: 180px;
             height: 180px;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
             margin-left: 30px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            border: 3px solid #fff;
+            transition: transform 0.3s ease;
+        }
+        
+        .photo:hover {
+            transform: scale(1.05);
         }
         
         .photo img {
@@ -93,6 +109,13 @@
             margin-bottom: 15px;
             border-bottom: 1px solid #ddd;
             padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2::before {
+            font-size: 24px;
         }
         
         .bio {
@@ -252,7 +275,7 @@
         </div>
 
         <section>
-            <h2>Biography</h2>
+            <h2><span style="font-size: 24px;">👤</span> Biography</h2>
             <div class="bio">
                 <p>I am currently a PhD candidate at Hefei University of Technology, supervised by Professor Wang Qingshan. Additionally, I worked as an intern as an Assistant Algorithm Engineer at iFLYTEK Co., Ltd.</p>
                 <p>My research focus is mainly on sign language generation, and I am also interested in human pose and video understanding.</p>
@@ -260,7 +283,7 @@
         </section>
 
         <section>
-            <h2>News</h2>
+            <h2><span style="font-size: 24px;">📰</span> News</h2>
             <div class="news-container">
                 <div class="news-item">
                     <span class="date">[12/2025]</span> One paper is accepted by TCSVT!
@@ -287,7 +310,7 @@
         </section>
 
         <section>
-            <h2>Publications</h2>
+            <h2><span style="font-size: 24px;">📚</span> Publications</h2>
             <p style="margin-bottom: 15px; font-size: 14px; color: #666;">(*corresponding author)</p>
             
             <div class="publication">
@@ -366,23 +389,23 @@
         </section>
 
         <section>
-            <h2>Awards</h2>
+            <h2><span style="font-size: 24px;">🏆</span> Awards</h2>
             <div class="award-item">Outstanding Graduate, FYNU, 2021</div>
         </section>
 
         <section>
-            <h2>Invited Talks</h2>
+            <h2><span style="font-size: 24px;">🎤</span> Invited Talks</h2>
             <div class="talk-item">XXXX, XX Universality, 07/2025</div>
         </section>
 
         <section>
-            <h2>Services</h2>
+            <h2><span style="font-size: 24px;">🤝</span> Services</h2>
             <div class="service-item"><strong>Conference Reviewer:</strong> IEEE SPL, MSN 2024</div>
             <div class="service-item"><strong>Journal Reviewer:</strong> TMM, TOMM</div>
         </section>
 
         <section>
-            <h2>Teaching</h2>
+            <h2><span style="font-size: 24px;">👨‍🏫</span> Teaching</h2>
             <div class="teaching-item">Teaching Assistant: Object-Oriented Programming and Data Structures, Fall Semester 2022</div>
         </section>
 
