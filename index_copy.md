@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>研究员个人主页</title>
+    <title>Andy Chen (陈生)-Homepage</title>
+     <link rel="icon" href="andy.jpg">
     <style>
         * {
             margin: 0;
@@ -32,8 +33,12 @@
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 30px;
-            border-bottom: 2px solid #4a90e2;
+            border-bottom: 3px solid #4a90e2;
             padding-bottom: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
         }
         
         .info {
@@ -41,10 +46,11 @@
         }
         
         .name {
-            font-size: 28px;
-            color: #4a90e2;
+            font-size: 32px;
+            color: #2c5aa0;
             margin-bottom: 15px;
             font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
         
         .position {
@@ -62,19 +68,30 @@
             color: #4a90e2;
             text-decoration: none;
             margin-right: 10px;
+            transition: all 0.3s ease;
+            padding: 3px 8px;
+            border-radius: 4px;
         }
         
         .contact a:hover {
-            text-decoration: underline;
+            background-color: #4a90e2;
+            color: white;
+            text-decoration: none;
         }
         
         .photo {
             width: 180px;
             height: 180px;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
             margin-left: 30px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            border: 3px solid #fff;
+            transition: transform 0.3s ease;
+        }
+        
+        .photo:hover {
+            transform: scale(1.05);
         }
         
         .photo img {
@@ -93,6 +110,13 @@
             margin-bottom: 15px;
             border-bottom: 1px solid #ddd;
             padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2::before {
+            font-size: 24px;
         }
         
         .bio {
@@ -101,7 +125,7 @@
         }
         
         .news-container {
-            max-height: 300px;
+            max-height: 180px;
             overflow-y: auto;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -235,14 +259,15 @@
         <div class="header">
             <div class="info">
                 <h1 class="name">Sheng Chen (陈生)</h1>
-                <div class="position">Research Associate</div>
+                <h2>Ph.D. student</h2>
+                <div class="position">Hefei, Anhui 230601, China</div>
                 <div class="position">Hefei University of Technology</div>
-                <div class="position">某某研究所/实验室</div>
+                <div class="position">The School of Mathematics</div>
                 <div class="contact">
                     <strong>Email:</strong> <a href="mailto:2021111446@mail.hfut.edu.cn">2021111446@mail.hfut.edu.cn</a><br>
                     <a href="#">[CV]</a>
                     <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AKzYXQ27ObF2Cr43jjNrUZR1bN2x-ZClNZvwDb4x15DeIzSUcOPiJ5N52aFddJ1GyfEbq2UdLg5ysZtNpRcrrQ&user=n58lEPQAAAAJ">[Google Scholar]</a>
-                    <a href="https://github.com/herochen7372">[GitHub]</a>
+                    <a href="https://github.com/andychen-x">[GitHub]</a>
                 </div>
             </div>
             <div class="photo">
@@ -251,59 +276,68 @@
         </div>
 
         <section>
-            <h2>Biography</h2>
+            <h2><span style="font-size: 24px;">👤</span> Biography</h2>
             <div class="bio">
-                <p>我目前是XXX的研究助理，与XXX教授合作。此前，我在合肥工业大学大学获得了博士学位，导师是王青山教授。此外，我曾在科大讯飞公司担任助理算法工程师的实习生。</p>
-                <p>我的研究方向主要集中在手语生成领域，同时我也对人体姿态和视频理解感兴趣。</p>
+                <p>I am currently a PhD candidate at Hefei University of Technology, supervised by Professor <a href="https://maths.hfut.edu.cn/info/1082/4819.htm">Wang Qingshan</a>. Additionally, I worked as an intern as an Assistant Algorithm Engineer at iFLYTEK Co., Ltd.</p>
+                <p>My research focus is mainly on sign language generation, and I am also interested in human pose and video understanding.</p>
             </div>
         </section>
 
         <section>
-            <h2>News</h2>
+            <h2><span style="font-size: 24px;">📰</span> News</h2>
             <div class="news-container">
                 <div class="news-item">
-                    <span class="date">[11/2024]</span> 一篇论文被XXX会议接收！
+                    <span class="date">[06/2026]</span> One paper is accepted by TMM!
                 </div>
                 <div class="news-item">
-                    <span class="date">[09/2024]</span> 开始在XXXX大学担任研究助理。
+                    <span class="date">[04/2026]</span> 《一种仅解码器的流式手语生成框架》 is accepted by Journal of HFUT (D. Wang, S. Q. Wang, and S. Chen).
                 </div>
                 <div class="news-item">
-                    <span class="date">[06/2024]</span> 一篇论文被XXX 2024接收。
+                    <span class="date">[12/2025]</span> One paper is accepted by MS.
                 </div>
                 <div class="news-item">
-                    <span class="date">[03/2024]</span> 通过博士答辩，现在是博士候选人！
+                    <span class="date">[07/2025]</span> One paper is accepted by TOMM.
                 </div>
                 <div class="news-item">
-                    <span class="date">[12/2023]</span> 受邀在斛兵青年说会议上做报告。
+                    <span class="date">[05/2025]</span> 《一种基于生成对抗网络的手语生成方法》 is accepted by Journal of HFUT (Y. R. Yang, S. Q. Wang, and S. Chen).
                 </div>
                 <div class="news-item">
-                    <span class="date">[09/2023]</span> 获得"明日之星"奖项。
+                    <span class="date">[05/2025]</span> 《一种基于条件知识蒸馏的区域光伏发电预测模型》 is accepted by Journal of HFUT (R. Zuo, S. Q. Wang, and S. Chen).
                 </div>
                 <div class="news-item">
-                    <span class="date">[03/2024]</span> 一篇论文被CVIU接受。
+                    <span class="date">[10/2024]</span> Be invited to give a speech at the <a href="https://news.hfut.edu.cn/info/1017/69621.htm">Hugbing Youth Forum</a>.
                 </div>
                 <div class="news-item">
-                    <span class="date">[11/2022]</span> 开始在科大讯飞股份有限公司实习。
+                    <span class="date">[09/2024]</span> One paper is accepted by CVIU!
+                </div>
+                <div class="news-item">
+                    <span class="date">[06/2024]</span> 《基于图卷积与球面插值的自适应手语平滑方法》 is accepted by Journal of HFUT (Z. W. Wang, S. Q. Wang, and S. Chen).
+                </div>
+                <div class="news-item">
+                    <span class="date">[08/2023]</span> Won the Bronze Award in the Graduate Innovation Track of the 9th Hefei University of Technology "Internet+" College Students' Innovation and Entrepreneurship Competition.
+                </div>
+                <div class="news-item">
+                    <span class="date">[11/2022]</span> Start my internship at iFLYTEK.
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Publications</h2>
-            <p style="margin-bottom: 15px; font-size: 14px; color: #666;">(*共同第一作者)</p>
+            <h2><span style="font-size: 24px;">📚</span> Publications</h2>
+            <p style="margin-bottom: 15px; font-size: 14px; color: #666;">(*corresponding author)</p>
             
             <div class="publication">
                 <div class="pub-title">
                     <a href="#">Semantic-driven diffusion for sign language production with gloss-pose latent spaces alignment</a>
                 </div>
                 <div class="pub-authors">
-                    <strong>S. Chen</strong>, Q. S. Wang, and Q. Wang
+                    <strong>S. Chen</strong>, Q. S. Wang*, and Q. Wang
                 </div>
                 <div class="pub-venue">
                     Computer Vision Image and Understanding (<strong>CVIU</strong>), 2024
                 </div>
                 <div class="pub-links">
-                    [<a href="#">pdf</a>] [<a href="#">code</a>] [<a href="#">project</a>]
+                    [<a href="https://www.sciencedirect.com/science/article/pii/S1077314224001310?via%3Dihub">pdf</a>]
                 </div>
             </div>
 
@@ -312,10 +346,10 @@
                     <a href="#">Sign4DAvatar: A Priori Decoder-Enhanced Transformer with Pose Smooth Filter for 4D Sign Avatar Recovery</a>
                 </div>
                 <div class="pub-authors">
-                    <strong>S. Chen</strong>, Q. S. Wang, and Q. Wang 
+                    <strong>S. Chen</strong>, Q. S. Wang*, and Q. Wang* 
                 </div>
                 <div class="pub-venue">
-                    IEEE Transactions on Multimedia (<strong>TMM</strong>), 2025, <span class="highlight">Oral</span>
+                    IEEE Transactions on Multimedia (<strong>TMM</strong>), 2026
                 </div>
                 <div class="pub-links">
                     [<a href="#">pdf</a>] [<a href="#">code</a>]
@@ -327,10 +361,10 @@
                     <a href="#">GFTVQ-SAP：Gloss-Free Transformer with Vector Quantization for Sign Avatar Production</a>
                 </div>
                 <div class="pub-authors">
-                    <strong>S. Chen</strong>, Q. S. Wang, and Q. Wang 
+                    <strong>S. Chen</strong>, Q. S. Wang*, and Q. Wang* 
                 </div>
                 <div class="pub-venue">
-                    IEEE Transactions on Multimedia (<strong>TMM</strong>), 2025, <span class="highlight">Oral</span>
+                    IEEE Transactions on Multimedia (<strong>TMM</strong>), 2026, <span class="highlight">Under Review</span>
                 </div>
                 <div class="pub-links">
                     [<a href="#">pdf</a>] [<a href="#">code</a>]
@@ -342,44 +376,89 @@
                     <a href="#">Accurate hand modeling in whole-body mesh reconstruction using joint-level features and kinematic-aware topology</a>
                 </div>
                 <div class="pub-authors">
-                    F. B. Guo, Q. Wang, Q. S. Wang, and <strong>S. Chen</strong>
+                    F. B. Guo, Q. Wang*, S. Q. Wang*, and <strong>S. Chen</strong>
                 </div>
                 <div class="pub-venue">
                     ACM Transactions on Multimedia Computing, Communications, and Applications (<strong>TOMM</strong>), 2024
                 </div>
                 <div class="pub-links">
-                    [<a href="#">pdf</a>] [<a href="#">dataset</a>]
+                    [<a href="https://dl.acm.org/doi/abs/10.1145/3743138">pdf</a>]
+                </div>
+            </div>
+            <div class="publication">
+                <div class="pub-title">
+                    <a href="#">Angle and Graph Topology Enhanced Framework with Dual-Channel Mixed Token Progressing Unit for Sign Language Production</a>
+                </div>
+                <div class="pub-authors">
+                    Y. R. Yang, Q. S. Wang*, Q. Wang, and <strong>S. Chen</strong>
+                </div>
+                <div class="pub-venue">
+                    Multimedia Systems (<strong>MS</strong>), 2025
+                </div>
+                <div class="pub-links">
+                    [<a href="https://link.springer.com/article/10.1007/s00530-025-02100-0">pdf</a>]
+                </div>
+            </div>
+            <div class="publication">
+                <div class="pub-title">
+                    <a href="#">MWASLT: A Multimodal Weight-Adaptive Framework with Cross-Modal Alignment and Large Language Models for Sign Language Translation</a>
+                </div>
+                <div class="pub-authors">
+                    X. Guo, Q. S. Wang*, Q. Wang, and <strong>S. Chen</strong>
+                </div>
+                <div class="pub-venue">
+                    ACM Transactions on Asian and Low-Resource Language Information Processing (<strong>TALLIP</strong>), 2026, <span class="highlight">Under Review</span>
+                </div>
+                <div class="pub-links">
+                    [<a href="https://link.springer.com/article/10.1007/s00530-025-02100-0">pdf</a>]
+                </div>
+            </div>
+            <div class="publication">
+                <div class="pub-title">
+                    <a href="#">Spatial Prior-Aware Multimodal Framework for Document Key Information Extraction</a>
+                </div>
+                <div class="pub-authors">
+                    J. L. Liao, Q. S. Wang*, X. Q. Wu, Q. Wang, and <strong>S. Chen</strong>
+                </div>
+                <div class="pub-venue">
+                    IEEE Transactions on Multimedia (<strong>TMM</strong>), 2026, <span class="highlight">Under Review</span>
+                </div>
+                <div class="pub-links">
+                    [<a href="https://link.springer.com/article/10.1007/s00530-025-02100-0">pdf</a>]
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Awards</h2>
-            <div class="award-item">明日之星奖, 某某机构, 2023</div>
-            <div class="award-item">优秀毕业生, 某某大学, 2020</div>
-            <div class="award-item">优秀毕业生, 阜阳师范大学, 2021</div>
+            <h2><span style="font-size: 24px;">🏆</span> Awards</h2>
+            <div class="award-item">First Prize in School-level Preliminary Contest of the "Challenge Cup" National College Students' Entrepreneurship Competition, HFUT, 05/2026</div>
+            <div class="award-item">Bronze Award in Postgraduate Creative Group at the school round of the 9th "Internet+" Innovation and Entrepreneurship Competition, HFUT, 08/2023</div>
+            <div class="award-item">Outstanding Graduate, FYNU, 2021</div>
+            <div class="award-item">Second Prize of Category B in the 12th National College Mathematics Competition, Chinese Mathematical Society, 12/2020</div>
+            <div class="award-item">Silver Award at the school preliminary contest of the 6th China International College Students' "Internet+" Innovation and Entrepreneurship Competition, FYNU, 09/2020</div>
+            <div class="award-item">Second Prize in Stage 1 of the National Round of the 12th "Certification Cup" Mathematical China Mathematical Modeling Online Challenge, Chinese Operations Research Society, 2029</div>
+            
         </section>
 
         <section>
-            <h2>Invited Talks</h2>
-            <div class="talk-item">XXX领域的进展与挑战, 某某大学, 07/2025</div>
-            <div class="talk-item">基于视觉的XXX处理, 某某研究院, 11/2024</div>
-            <div class="talk-item">XXX系统介绍, 某某学院, 01/2024</div>
+            <h2><span style="font-size: 24px;">🎤</span> Invited Talks</h2>
+            <div class="talk-item">Hugbing Youth Forum, Hefei Universality of Technology, 10/2024</div>
         </section>
 
         <section>
-            <h2>Services</h2>
-            <div class="service-item"><strong>会议审稿人:</strong> CVPR, ICCV, ECCV, NeurIPS, ICML, ICLR, AAAI</div>
-            <div class="service-item"><strong>期刊审稿人:</strong> TMM, TOMM</div>
+            <h2><span style="font-size: 24px;">🤝</span> Services</h2>
+            <div class="service-item"><strong>Conference Reviewer:</strong> IEEE SPL, MSN 2024</div>
+            <div class="service-item"><strong>Journal Reviewer:</strong> TMM, TOMM</div>
+            <div class="service-item"><strong>Student Leadership:</strong> Class Monitor & League Branch Secretary, Doctoral Class of Mathematics, 2024.09–2026.06</div>
         </section>
 
         <section>
-            <h2>Teaching</h2>
-            <div class="teaching-item">助教：面向对象编程与数据结构, 2022年秋季学期</div>
+            <h2><span style="font-size: 24px;">👨‍🏫</span> Teaching</h2>
+            <div class="teaching-item">Teaching Assistant: Object-Oriented Programming and Data Structures, Fall Semester 2022</div>
         </section>
 
         <footer>
-            © 2024-2025 Andy Chen. 最后更新于 2025年1月.
+            © 2024-2025 Andy Chen. Last updated in 11/2025.
         </footer>
     </div>
 </body>
