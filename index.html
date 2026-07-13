@@ -1,465 +1,361 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andy Chen (陈生)-Homepage</title>
-     <link rel="icon" href="andy.jpg">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f8f8;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 30px;
-            border-bottom: 3px solid #4a90e2;
-            padding-bottom: 20px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 40px;
-        }
-        
-        .info {
-            flex: 1;
-        }
-        
-        .name {
-            font-size: 32px;
-            color: #2c5aa0;
-            margin-bottom: 15px;
-            font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-        
-        .position {
-            font-size: 16px;
-            margin-bottom: 5px;
-            color: #555;
-        }
-        
-        .contact {
-            margin-top: 15px;
-            font-size: 14px;
-        }
-        
-        .contact a {
-            color: #4a90e2;
-            text-decoration: none;
-            margin-right: 10px;
-            transition: all 0.3s ease;
-            padding: 3px 8px;
-            border-radius: 4px;
-        }
-        
-        .contact a:hover {
-            background-color: #4a90e2;
-            color: white;
-            text-decoration: none;
-        }
-        
-        .photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 12px;
-            overflow: hidden;
-            margin-left: 30px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-            border: 3px solid #fff;
-            transition: transform 0.3s ease;
-        }
-        
-        .photo:hover {
-            transform: scale(1.05);
-        }
-        
-        .photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        section {
-            margin-bottom: 35px;
-        }
-        
-        h2 {
-            color: #4a90e2;
-            font-size: 22px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        h2::before {
-            font-size: 24px;
-        }
-        
-        .bio {
-            text-align: justify;
-            line-height: 1.8;
-        }
-        
-        .news-container {
-            max-height: 180px;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            background-color: #fafafa;
-        }
-        
-        .news-container::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        .news-container::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 4px;
-        }
-        
-        .news-container::-webkit-scrollbar-thumb {
-            background: #4a90e2;
-            border-radius: 4px;
-        }
-        
-        .news-container::-webkit-scrollbar-thumb:hover {
-            background: #357abd;
-        }
-        
-        .news-item, .award-item, .talk-item, .service-item, .teaching-item {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .news-item::before, .award-item::before, .talk-item::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: #4a90e2;
-        }
-        
-        .news-item .date {
-            font-weight: bold;
-            color: #666;
-        }
-        
-        .publication {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .publication::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #4a90e2;
-            font-size: 20px;
-        }
-        
-        .pub-title {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 5px;
-        }
-        
-        .pub-title a {
-            color: #4a90e2;
-            text-decoration: none;
-        }
-        
-        .pub-title a:hover {
-            text-decoration: underline;
-        }
-        
-        .pub-authors {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 3px;
-        }
-        
-        .pub-venue {
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .pub-links {
-            margin-top: 5px;
-        }
-        
-        .pub-links a {
-            color: #4a90e2;
-            text-decoration: none;
-            margin-right: 10px;
-            font-size: 13px;
-        }
-        
-        .pub-links a:hover {
-            text-decoration: underline;
-        }
-        
-        .highlight {
-            background-color: #fff3cd;
-            padding: 2px 4px;
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #777;
-            font-size: 13px;
-        }
-        
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-            }
-            
-            .photo {
-                margin-left: 0;
-                margin-top: 20px;
-            }
-            
-            .container {
-                padding: 20px;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1ea">
+  <meta name="description" content="Sheng Chen is a Ph.D. candidate at Hefei University of Technology working on sign language generation, human pose, and video understanding.">
+  <link rel="canonical" href="https://andychen-x.github.io/">
+  <title>Sheng Chen — Sign Language Generation Researcher</title>
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="andy.jpg">
+  <link rel="stylesheet" href="styles.css">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Sheng Chen">
+  <meta property="og:title" content="Sheng Chen — Sign Language Generation Researcher">
+  <meta property="og:description" content="Ph.D. candidate researching sign language generation, human pose, and video understanding.">
+  <meta property="og:url" content="https://andychen-x.github.io/">
+  <meta property="og:image" content="https://andychen-x.github.io/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sheng Chen — Sign Language Generation, Human Pose, Video Understanding">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sheng Chen — Sign Language Generation Researcher">
+  <meta name="twitter:description" content="Ph.D. candidate researching sign language generation, human pose, and video understanding.">
+  <meta name="twitter:image" content="https://andychen-x.github.io/og.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sheng Chen",
+    "alternateName": "陈生",
+    "url": "https://andychen-x.github.io/",
+    "email": "mailto:2021111446@mail.hfut.edu.cn",
+    "jobTitle": "Ph.D. Candidate",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Hefei University of Technology"
+    },
+    "knowsAbout": [
+      "Sign Language Generation",
+      "Human Pose",
+      "Video Understanding"
+    ],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=n58lEPQAAAAJ&hl=en",
+      "https://github.com/andychen-x"
+    ]
+  }
+  </script>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="info">
-                <h1 class="name">Sheng Chen (陈生)</h1>
-                <h2>Ph.D. student</h2>
-                <div class="position">Hefei, Anhui 230601, China</div>
-                <div class="position">Hefei University of Technology</div>
-                <div class="position">The School of Mathematics</div>
-                <div class="contact">
-                    <strong>Email:</strong> <a href="mailto:2021111446@mail.hfut.edu.cn">2021111446@mail.hfut.edu.cn</a><br>
-                    <a href="#">[CV]</a>
-                    <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AKzYXQ27ObF2Cr43jjNrUZR1bN2x-ZClNZvwDb4x15DeIzSUcOPiJ5N52aFddJ1GyfEbq2UdLg5ysZtNpRcrrQ&user=n58lEPQAAAAJ">[Google Scholar]</a>
-                    <a href="https://github.com/andychen-x">[GitHub]</a>
-                </div>
-            </div>
-            <div class="photo">
-                <img src="andy.jpg" alt="个人照片">
-            </div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="monogram" href="#top" aria-label="Sheng Chen, back to top">SC<span>.</span></a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#updates">Updates</a>
+        <a href="#publications">Publications</a>
+        <a href="#more">More</a>
+      </nav>
+      <a class="nav-contact" href="mailto:2021111446@mail.hfut.edu.cn">Email me</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero shell" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Ph.D. Candidate · Hefei University of Technology</p>
+        <h1 id="hero-title">Sheng Chen <span lang="zh-CN">陈生</span></h1>
+        <p class="hero-lede">I study how generative models can turn language into expressive, natural sign motion.</p>
+
+        <ul class="focus-list" aria-label="Research interests">
+          <li>Sign language generation</li>
+          <li>Human pose</li>
+          <li>Video understanding</li>
+        </ul>
+
+        <div class="hero-actions" aria-label="Profile links">
+          <a class="button button-primary" href="https://scholar.google.com/citations?user=n58lEPQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="https://github.com/andychen-x" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="mailto:2021111446@mail.hfut.edu.cn">2021111446@mail.hfut.edu.cn</a>
         </div>
 
-        <section>
-            <h2><span style="font-size: 24px;">👤</span> Biography</h2>
-            <div class="bio">
-                <p>I am currently a PhD candidate at Hefei University of Technology, supervised by Professor <a href="https://maths.hfut.edu.cn/info/1082/4819.htm">Wang Qingshan</a>. Additionally, I worked as an intern as an Assistant Algorithm Engineer at iFLYTEK Co., Ltd.</p>
-                <p>My research focus is mainly on sign language generation, and I am also interested in human pose and video understanding.</p>
+        <dl class="hero-meta">
+          <div>
+            <dt>Affiliation</dt>
+            <dd>School of Mathematics, HFUT</dd>
+          </div>
+          <div>
+            <dt>Advisor</dt>
+            <dd><a href="https://maths.hfut.edu.cn/info/1082/4819.htm" target="_blank" rel="noopener noreferrer">Prof. Qingshan Wang <span aria-hidden="true">↗</span></a></dd>
+          </div>
+          <div>
+            <dt>Based in</dt>
+            <dd>Hefei, Anhui, China</dd>
+          </div>
+        </dl>
+      </div>
+
+      <aside class="portrait-panel" aria-label="Portrait and research summary">
+        <div class="portrait-frame">
+          <picture>
+            <source srcset="andy.webp" type="image/webp">
+            <img src="andy.jpg" alt="Illustrated portrait of Sheng Chen" width="1189" height="1189" fetchpriority="high">
+          </picture>
+        </div>
+        <p><span>Research focus</span> Generative models for expressive sign avatars.</p>
+      </aside>
+    </section>
+
+    <section class="section shell" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="section-number">01</p>
+        <div>
+          <p class="section-kicker">Biography</p>
+          <h2 id="about-title">Research with language,<br>motion, and meaning.</h2>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>I am a Ph.D. candidate at the School of Mathematics, Hefei University of Technology, advised by <a href="https://maths.hfut.edu.cn/info/1082/4819.htm" target="_blank" rel="noopener noreferrer">Prof. Qingshan Wang</a>. Previously, I worked as an Assistant Algorithm Engineer Intern at iFLYTEK.</p>
+          <p>My primary research focuses on sign language generation. I am also interested in human pose modeling and video understanding, especially where structured motion and generative learning meet.</p>
+        </div>
+
+        <div class="research-list" aria-label="Research areas">
+          <article>
+            <span>01</span>
+            <div>
+              <h3>Sign Language Generation</h3>
+              <p>Translating language representations into fluent and semantically faithful sign motion.</p>
             </div>
-        </section>
-
-        <section>
-            <h2><span style="font-size: 24px;">📰</span> News</h2>
-            <div class="news-container">
-                <div class="news-item">
-                    <span class="date">[06/2026]</span> One paper is accepted by TMM!
-                </div>
-                <div class="news-item">
-                    <span class="date">[04/2026]</span> 《一种仅解码器的流式手语生成框架》 is accepted by Journal of HFUT (D. Wang, S. Q. Wang, and S. Chen).
-                </div>
-                <div class="news-item">
-                    <span class="date">[12/2025]</span> One paper is accepted by MS.
-                </div>
-                <div class="news-item">
-                    <span class="date">[07/2025]</span> One paper is accepted by TOMM.
-                </div>
-                <div class="news-item">
-                    <span class="date">[05/2025]</span> 《一种基于生成对抗网络的手语生成方法》 is accepted by Journal of HFUT (Y. R. Yang, S. Q. Wang, and S. Chen).
-                </div>
-                <div class="news-item">
-                    <span class="date">[05/2025]</span> 《一种基于条件知识蒸馏的区域光伏发电预测模型》 is accepted by Journal of HFUT (R. Zuo, S. Q. Wang, and S. Chen).
-                </div>
-                <div class="news-item">
-                    <span class="date">[10/2024]</span> Be invited to give a speech at the <a href="https://news.hfut.edu.cn/info/1017/69621.htm">Hugbing Youth Forum</a>.
-                </div>
-                <div class="news-item">
-                    <span class="date">[09/2024]</span> One paper is accepted by CVIU!
-                </div>
-                <div class="news-item">
-                    <span class="date">[06/2024]</span> 《基于图卷积与球面插值的自适应手语平滑方法》 is accepted by Journal of HFUT (Z. W. Wang, S. Q. Wang, and S. Chen).
-                </div>
-                <div class="news-item">
-                    <span class="date">[08/2023]</span> Won the Bronze Award in the Graduate Innovation Track of the 9th Hefei University of Technology "Internet+" College Students' Innovation and Entrepreneurship Competition.
-                </div>
-                <div class="news-item">
-                    <span class="date">[11/2022]</span> Start my internship at iFLYTEK.
-                </div>
+          </article>
+          <article>
+            <span>02</span>
+            <div>
+              <h3>Human Pose</h3>
+              <p>Modeling body, hand, and kinematic structure for natural whole-body movement.</p>
             </div>
-        </section>
-
-        <section>
-            <h2><span style="font-size: 24px;">📚</span> Publications</h2>
-            <p style="margin-bottom: 15px; font-size: 14px; color: #666;">(*corresponding author)</p>
-            
-            <div class="publication">
-                <div class="pub-title">
-                    <a href="#">Semantic-driven diffusion for sign language production with gloss-pose latent spaces alignment</a>
-                </div>
-                <div class="pub-authors">
-                    <strong>S. Chen</strong>, Q. S. Wang*, and Q. Wang
-                </div>
-                <div class="pub-venue">
-                    Computer Vision Image and Understanding (<strong>CVIU</strong>), 2024
-                </div>
-                <div class="pub-links">
-                    [<a href="https://www.sciencedirect.com/science/article/pii/S1077314224001310?via%3Dihub">pdf</a>]
-                </div>
+          </article>
+          <article>
+            <span>03</span>
+            <div>
+              <h3>Video Understanding</h3>
+              <p>Learning temporal and multimodal representations from complex visual sequences.</p>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <div class="publication">
-                <div class="pub-title">
-                    <a href="#">Sign4DAvatar: A Priori Decoder-Enhanced Transformer with Pose Smooth Filter for 4D Sign Avatar Recovery</a>
-                </div>
-                <div class="pub-authors">
-                    <strong>S. Chen</strong>, Q. S. Wang*, and Q. Wang* 
-                </div>
-                <div class="pub-venue">
-                    IEEE Transactions on Multimedia (<strong>TMM</strong>), 2026
-                </div>
-                <div class="pub-links">
-                    [<a href="#">pdf</a>] [<a href="#">code</a>]
-                </div>
-            </div>
+    <section class="section section-tinted" id="updates" aria-labelledby="updates-title">
+      <div class="shell">
+        <div class="section-heading compact-heading">
+          <p class="section-number">02</p>
+          <div>
+            <p class="section-kicker">Latest news</p>
+            <h2 id="updates-title">Recent milestones.</h2>
+          </div>
+        </div>
 
-            <div class="publication">
-                <div class="pub-title">
-                    <a href="#">GFTVQ-SAP：Gloss-Free Transformer with Vector Quantization for Sign Avatar Production</a>
-                </div>
-                <div class="pub-authors">
-                    <strong>S. Chen</strong>, Q. S. Wang*, and Q. Wang* 
-                </div>
-                <div class="pub-venue">
-                    IEEE Transactions on Multimedia (<strong>TMM</strong>), 2026, <span class="highlight">Under Review</span>
-                </div>
-                <div class="pub-links">
-                    [<a href="#">pdf</a>] [<a href="#">code</a>]
-                </div>
-            </div>
+        <ol class="timeline">
+          <li>
+            <time datetime="2026-06">Jun. 2026</time>
+            <p><strong>Sign4DAvatar</strong> was accepted by <abbr title="IEEE Transactions on Multimedia">IEEE TMM</abbr>.</p>
+          </li>
+          <li>
+            <time datetime="2026-04">Apr. 2026</time>
+            <p>“A Decoder-Only Streaming Framework for Sign Language Generation” was accepted by the <cite>Journal of Hefei University of Technology</cite>.</p>
+          </li>
+          <li>
+            <time datetime="2025-12">Dec. 2025</time>
+            <p><strong>AG-TEF</strong> was accepted by <cite>Multimedia Systems</cite>.</p>
+          </li>
+          <li>
+            <time datetime="2025-07">Jul. 2025</time>
+            <p><strong>Accurate Hand Modeling in Whole-Body Mesh Reconstruction</strong> was accepted by <abbr title="ACM Transactions on Multimedia Computing, Communications, and Applications">ACM TOMM</abbr>.</p>
+          </li>
+          <li>
+            <time datetime="2025-05">May 2025</time>
+            <p>Two papers on sign language generation and regional photovoltaic power forecasting were accepted by the <cite>Journal of Hefei University of Technology</cite>.</p>
+          </li>
+        </ol>
 
-            <div class="publication">
-                <div class="pub-title">
-                    <a href="#">Accurate hand modeling in whole-body mesh reconstruction using joint-level features and kinematic-aware topology</a>
-                </div>
-                <div class="pub-authors">
-                    F. B. Guo, Q. Wang*, S. Q. Wang*, and <strong>S. Chen</strong>
-                </div>
-                <div class="pub-venue">
-                    ACM Transactions on Multimedia Computing, Communications, and Applications (<strong>TOMM</strong>), 2024
-                </div>
-                <div class="pub-links">
-                    [<a href="https://dl.acm.org/doi/abs/10.1145/3743138">pdf</a>]
-                </div>
-            </div>
-            <div class="publication">
-                <div class="pub-title">
-                    <a href="#">Angle and Graph Topology Enhanced Framework with Dual-Channel Mixed Token Progressing Unit for Sign Language Production</a>
-                </div>
-                <div class="pub-authors">
-                    Y. R. Yang, Q. S. Wang*, Q. Wang, and <strong>S. Chen</strong>
-                </div>
-                <div class="pub-venue">
-                    Multimedia Systems (<strong>MS</strong>), 2025
-                </div>
-                <div class="pub-links">
-                    [<a href="https://link.springer.com/article/10.1007/s00530-025-02100-0">pdf</a>]
-                </div>
-            </div>
-            <div class="publication">
-                <div class="pub-title">
-                    <a href="#">MWASLT: A Multimodal Weight-Adaptive Framework with Cross-Modal Alignment and Large Language Models for Sign Language Translation</a>
-                </div>
-                <div class="pub-authors">
-                    X. Guo, Q. S. Wang*, Q. Wang, and <strong>S. Chen</strong>
-                </div>
-                <div class="pub-venue">
-                    ACM Transactions on Asian and Low-Resource Language Information Processing (<strong>TALLIP</strong>), 2026, <span class="highlight">Under Review</span>
-                </div>
-                <div class="pub-links">
-                    [<a href="https://link.springer.com/article/10.1007/s00530-025-02100-0">pdf</a>]
-                </div>
-            </div>
-            <div class="publication">
-                <div class="pub-title">
-                    <a href="#">Spatial Prior-Aware Multimodal Framework for Document Key Information Extraction</a>
-                </div>
-                <div class="pub-authors">
-                    J. L. Liao, Q. S. Wang*, X. Q. Wu, Q. Wang, and <strong>S. Chen</strong>
-                </div>
-                <div class="pub-venue">
-                    IEEE Transactions on Multimedia (<strong>TMM</strong>), 2026, <span class="highlight">Under Review</span>
-                </div>
-                <div class="pub-links">
-                    [<a href="https://link.springer.com/article/10.1007/s00530-025-02100-0">pdf</a>]
-                </div>
-            </div>
-        </section>
+        <details class="news-archive">
+          <summary>View earlier updates <span aria-hidden="true">+</span></summary>
+          <ol class="timeline archive-timeline">
+            <li>
+              <time datetime="2024-11">Nov. 2024</time>
+              <p>Invited to speak at the <a href="https://news.hfut.edu.cn/info/1017/69621.htm" target="_blank" rel="noopener noreferrer">150th Hubing Youth Talk <span aria-hidden="true">↗</span></a> at HFUT.</p>
+            </li>
+            <li>
+              <time datetime="2024-09">Sep. 2024</time>
+              <p><strong>Semantic-Driven Diffusion for Sign Language Production</strong> was published in <cite>Computer Vision and Image Understanding</cite>.</p>
+            </li>
+            <li>
+              <time datetime="2024-06">Jun. 2024</time>
+              <p>“Adaptive Sign Language Smoothing via Graph Convolution and Spherical Interpolation” was accepted by the <cite>Journal of Hefei University of Technology</cite>.</p>
+            </li>
+            <li>
+              <time datetime="2023-08">Aug. 2023</time>
+              <p>Won the Bronze Award in the Graduate Innovation Track of HFUT’s ninth “Internet+” Innovation and Entrepreneurship Competition.</p>
+            </li>
+            <li>
+              <time datetime="2022-11">Nov. 2022</time>
+              <p>Started an internship at iFLYTEK.</p>
+            </li>
+          </ol>
+        </details>
+      </div>
+    </section>
 
-        <section>
-            <h2><span style="font-size: 24px;">🏆</span> Awards</h2>
-            <div class="award-item">First Prize in School-level Preliminary Contest of the "Challenge Cup" National College Students' Entrepreneurship Competition, HFUT, 05/2026</div>
-            <div class="award-item">Bronze Award in Postgraduate Creative Group at the school round of the 9th "Internet+" Innovation and Entrepreneurship Competition, HFUT, 08/2023</div>
-            <div class="award-item">Outstanding Graduate, FYNU, 2021</div>
-            <div class="award-item">Second Prize of Category B in the 12th National College Mathematics Competition, Chinese Mathematical Society, 12/2020</div>
-            <div class="award-item">Silver Award at the school preliminary contest of the 6th China International College Students' "Internet+" Innovation and Entrepreneurship Competition, FYNU, 09/2020</div>
-            <div class="award-item">Second Prize in Stage 1 of the National Round of the 12th "Certification Cup" Mathematical China Mathematical Modeling Online Challenge, Chinese Operations Research Society, 2029</div>
-            
-        </section>
+    <section class="section shell" id="publications" aria-labelledby="publications-title">
+      <div class="section-heading publications-heading">
+        <p class="section-number">03</p>
+        <div>
+          <p class="section-kicker">Publications</p>
+          <h2 id="publications-title">Selected research.</h2>
+          <p class="section-note">* Corresponding author</p>
+        </div>
+      </div>
 
-        <section>
-            <h2><span style="font-size: 24px;">🎤</span> Invited Talks</h2>
-            <div class="talk-item">Hugbing Youth Forum, Hefei Universality of Technology, 10/2024</div>
-        </section>
+      <div class="publication-group" aria-labelledby="published-title">
+        <h3 id="published-title">Published &amp; accepted</h3>
 
-        <section>
-            <h2><span style="font-size: 24px;">🤝</span> Services</h2>
-            <div class="service-item"><strong>Conference Reviewer:</strong> IEEE SPL, MSN 2024</div>
-            <div class="service-item"><strong>Journal Reviewer:</strong> TMM, TOMM</div>
-            <div class="service-item"><strong>Student Leadership:</strong> Class Monitor & League Branch Secretary, Doctoral Class of Mathematics, 2024.09–2026.06</div>
-        </section>
+        <article class="publication">
+          <p class="pub-index" aria-hidden="true">01</p>
+          <div class="pub-main">
+            <div class="pub-topline"><span class="venue-tag">IEEE TMM</span><span class="pub-year">2026 · Accepted</span></div>
+            <h4>Sign4DAvatar: A Priori Decoder-Enhanced Transformer with Pose Smooth Filter for 4D Sign Avatar Recovery</h4>
+            <p class="pub-authors"><strong>Sheng Chen</strong>, Qingshan Wang*, and Qi Wang*</p>
+          </div>
+        </article>
 
-        <section>
-            <h2><span style="font-size: 24px;">👨‍🏫</span> Teaching</h2>
-            <div class="teaching-item">Teaching Assistant: Object-Oriented Programming and Data Structures, Fall Semester 2022</div>
-        </section>
+        <article class="publication">
+          <p class="pub-index" aria-hidden="true">02</p>
+          <div class="pub-main">
+            <div class="pub-topline"><span class="venue-tag">Multimedia Systems</span><span class="pub-year">2026 · 32:33</span></div>
+            <h4>Angle and Graph Topology Enhanced Framework with Dual-Channel Mixed Token Progressing Unit for Sign Language Production</h4>
+            <p class="pub-authors">Yarun Yang, Qingshan Wang*, Qi Wang, and <strong>Sheng Chen</strong></p>
+            <p class="pub-links"><a href="https://doi.org/10.1007/s00530-025-02100-0" target="_blank" rel="noopener noreferrer">DOI <span aria-hidden="true">↗</span></a><span>Published online in 2025</span></p>
+          </div>
+        </article>
 
-        <footer>
-            © 2024-2025 Andy Chen. Last updated in 11/2025.
-        </footer>
+        <article class="publication">
+          <p class="pub-index" aria-hidden="true">03</p>
+          <div class="pub-main">
+            <div class="pub-topline"><span class="venue-tag">ACM TOMM</span><span class="pub-year">2025 · 21(7):211</span></div>
+            <h4>Accurate Hand Modeling in Whole-Body Mesh Reconstruction Using Joint-Level Features and Kinematic-Aware Topology</h4>
+            <p class="pub-authors">Fubin Guo, Qi Wang*, Qingshan Wang*, and <strong>Sheng Chen</strong></p>
+            <p class="pub-links"><a href="https://doi.org/10.1145/3743138" target="_blank" rel="noopener noreferrer">DOI <span aria-hidden="true">↗</span></a></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <p class="pub-index" aria-hidden="true">04</p>
+          <div class="pub-main">
+            <div class="pub-topline"><span class="venue-tag">CVIU</span><span class="pub-year">2024 · 246:104050</span></div>
+            <h4>Semantic-Driven Diffusion for Sign Language Production with Gloss-Pose Latent Spaces Alignment</h4>
+            <p class="pub-authors"><strong>Sheng Chen</strong>, Qingshan Wang*, and Qi Wang</p>
+            <p class="pub-links"><a href="https://doi.org/10.1016/j.cviu.2024.104050" target="_blank" rel="noopener noreferrer">DOI <span aria-hidden="true">↗</span></a><span>Computer Vision and Image Understanding</span></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="publication-group review-group" aria-labelledby="review-title">
+        <h3 id="review-title">Under review</h3>
+
+        <article class="publication">
+          <p class="pub-index" aria-hidden="true">05</p>
+          <div class="pub-main">
+            <div class="pub-topline"><span class="venue-tag status-review">Under review</span><span class="pub-year">IEEE TMM · 2026</span></div>
+            <h4>GFTVQ-SAP: Gloss-Free Transformer with Vector Quantization for Sign Avatar Production</h4>
+            <p class="pub-authors"><strong>Sheng Chen</strong>, Qingshan Wang*, and Qi Wang*</p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <p class="pub-index" aria-hidden="true">06</p>
+          <div class="pub-main">
+            <div class="pub-topline"><span class="venue-tag status-review">Under review</span><span class="pub-year">ACM TALLIP · 2026</span></div>
+            <h4>MWASLT: A Multimodal Weight-Adaptive Framework with Cross-Modal Alignment and Large Language Models for Sign Language Translation</h4>
+            <p class="pub-authors">X. Guo, Qingshan Wang*, Qi Wang, and <strong>Sheng Chen</strong></p>
+          </div>
+        </article>
+
+        <article class="publication">
+          <p class="pub-index" aria-hidden="true">07</p>
+          <div class="pub-main">
+            <div class="pub-topline"><span class="venue-tag status-review">Under review</span><span class="pub-year">IEEE TMM · 2026</span></div>
+            <h4>Spatial Prior-Aware Multimodal Framework for Document Key Information Extraction</h4>
+            <p class="pub-authors">J. L. Liao, Qingshan Wang*, X. Q. Wu, Qi Wang, and <strong>Sheng Chen</strong></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="more" aria-labelledby="more-title">
+      <div class="shell">
+        <div class="section-heading compact-heading dark-heading">
+          <p class="section-number">04</p>
+          <div>
+            <p class="section-kicker">Beyond publications</p>
+            <h2 id="more-title">Academic life.</h2>
+          </div>
+        </div>
+
+        <div class="more-grid">
+          <section class="more-block awards-block" aria-labelledby="awards-title">
+            <p class="more-label">Recognition</p>
+            <h3 id="awards-title">Awards</h3>
+            <ul class="detail-list">
+              <li><span>2026</span><p>First Prize, school preliminary contest of the “Challenge Cup” National College Students’ Entrepreneurship Competition, HFUT</p></li>
+              <li><span>2023</span><p>Bronze Award, Postgraduate Creative Group, ninth “Internet+” Innovation and Entrepreneurship Competition, HFUT</p></li>
+              <li><span>2021</span><p>Outstanding Graduate, Fuyang Normal University</p></li>
+              <li><span>2020</span><p>Second Prize, Category B, 12th National College Mathematics Competition</p></li>
+              <li><span>2020</span><p>Silver Award, sixth “Internet+” Innovation and Entrepreneurship Competition, FYNU</p></li>
+              <li><span>2019</span><p>Second Prize, Stage 1, 12th “Certification Cup” Mathematical Modeling Online Challenge</p></li>
+            </ul>
+          </section>
+
+          <section class="more-block" aria-labelledby="talks-title">
+            <p class="more-label">Exchange</p>
+            <h3 id="talks-title">Invited talk</h3>
+            <p class="more-copy"><a href="https://news.hfut.edu.cn/info/1017/69621.htm" target="_blank" rel="noopener noreferrer">150th Hubing Youth Talk <span aria-hidden="true">↗</span></a><br><span>Hefei University of Technology · Nov. 2024</span></p>
+          </section>
+
+          <section class="more-block" aria-labelledby="service-title">
+            <p class="more-label">Community</p>
+            <h3 id="service-title">Academic service</h3>
+            <dl class="service-list">
+              <div><dt>Journal reviewer</dt><dd>IEEE TMM, ACM TOMM, IEEE Signal Processing Letters</dd></div>
+              <div><dt>Conference reviewer</dt><dd>MSN 2024</dd></div>
+              <div><dt>Student leadership</dt><dd>Class Monitor &amp; League Branch Secretary, Doctoral Class of Mathematics, 2024–2026</dd></div>
+            </dl>
+          </section>
+
+          <section class="more-block" aria-labelledby="teaching-title">
+            <p class="more-label">Education</p>
+            <h3 id="teaching-title">Teaching</h3>
+            <p class="more-copy">Teaching Assistant<br><span>Object-Oriented Programming and Data Structures · Fall 2022</span></p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>© 2026 Sheng Chen</p>
+      <p>Last updated July 2026</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
     </div>
+  </footer>
 </body>
 </html>
